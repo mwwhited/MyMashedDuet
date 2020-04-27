@@ -1,5 +1,0 @@
-; Heater model parameters
-
-echo "Configured for 3 to 1 Bowden Hotend"
-
-M307 H1 A424.6 C236.6 D6.6 S1.0 V24.0 B0
