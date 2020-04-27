@@ -1,7 +1,7 @@
 
 echo "Configured for Direct Drive"
 
-M18; Disable motors
+M18 E ; extruder Disable motors
 G4 P200
 ;Set relays for direct drive
 M42 P0 S0
