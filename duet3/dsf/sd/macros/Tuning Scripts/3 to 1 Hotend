@@ -2,4 +2,13 @@
 
 echo "Configured for 3 to 1 Bowden Hotend"
 
-M307 H1 A424.6 C236.6 D6.6 S1.0 V24.0 B0
+M18 ; Turn off Steppers
+G4 P200
+M42 P0 S1 ; Ensure relay 0 is on
+M42 P1 S1 ; Ensure relay 1 is on
+M42 P2 S1 ; Ensure relay 2 is on
+G4 P200
+
+M307 H1 A424.6 C236.6 D6.6 S1.0 V24.0 B0 ; tune heater for reprap diamond
+
+configured 3 to 1 hotend
