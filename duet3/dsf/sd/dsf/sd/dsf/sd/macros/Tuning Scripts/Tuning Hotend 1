@@ -1,6 +1,0 @@
-;https://reprap.org/wiki/PID_Tuning
-
-echo "Tuning Hotend 1"
-M303 H1 P1 S210
-M307 H1
-;M500

@@ -2,7 +2,7 @@
 
 cd /home/pi/MyMashedDuet
 git pull
-rsync /home/pi/MyMashedDuet/duet3/dsf /opt/dsf/sd -rv
+rsync /home/pi/MyMashedDuet/duet3/dsf/sd /opt/dsf -rv
 rsync /opt/dsf/sd /home/pi/MyMashedDuet/duet3/dsf -rv
 sudo chown pi:pi . -R
 git add -A duet3
