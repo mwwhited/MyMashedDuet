@@ -126,11 +126,12 @@ M567 P3 E0.33:0.33:0.34                                 ; set mixing ratios for 
 
 ; Custom settings are not defined
 
-;Relay Controller
+; Configure outpus for Relay Controller
 M950 P0 C"io6.out"
 M950 P1 C"io7.out"
 M950 P2 C"io8.out"
 
+;  Default all relays to off
 M42 P0 S0
 M42 P1 S0
 M42 P2 S0
