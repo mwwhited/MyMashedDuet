@@ -1,0 +1,5 @@
+; Heater model parameters
+
+echo "Configured for 200mm x 200mm Glass Bed"
+
+M307 H0 A179 C803.3 D3.0 S1.0 V24.1 B0
