@@ -1,0 +1,2 @@
+echo Extrusion "Set for 3mm Bowden"
+M92 E97.3278
