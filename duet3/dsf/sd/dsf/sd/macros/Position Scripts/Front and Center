@@ -1,0 +1,11 @@
+; If the printer hasn't been homed, home it
+if !move.axes[0].homed || !move.axes[1].homed || !move.axes[2].homed
+  G28
+
+echo "Move Front & Center"
+;Move front and center
+G91
+G0 Z5
+G90 			; ensure absolute 
+;G0 X100 Y200 F10000	; move front and center
+G0  X{move.axes[0].max/2} Y{move.axes[1].max} F10000	; move front and center
