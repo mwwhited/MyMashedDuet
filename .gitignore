@@ -348,3 +348,9 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+
+# Matthew Whited 20200427 - My Custom Stuff
+duet3/dsf_sd/www
+sys/*.bin
+
