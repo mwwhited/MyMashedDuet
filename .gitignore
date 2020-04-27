@@ -351,6 +351,6 @@ MigrationBackup/
 
 
 # Matthew Whited 20200427 - My Custom Stuff
-duet3/dsf_sd/www
+duet3/dsf/sd/www
 sys/*.bin
 
