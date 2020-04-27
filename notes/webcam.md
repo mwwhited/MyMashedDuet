@@ -22,7 +22,7 @@ ExecStart=/bin/fswebcam -d /dev/video0 -r 800x600 -S 20 /opt/dsf/dwc2/image.jpg
 [webcam.timer](/etc/systemd/system/webcam.timer)
 ```
 [Unit]
-Description=RUn Webcam Every 5 Seconds
+Description=Run Webcam Every 5 Seconds
 
 [Timer]
 OnBootSec=5
