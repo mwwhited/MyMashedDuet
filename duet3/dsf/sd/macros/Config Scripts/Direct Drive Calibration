@@ -5,8 +5,8 @@ M18 E ; extruder Disable motors
 G4 P200
 ;Set relays for direct drive
 M42 P0 S0
-M42 P1 S1
-M42 P2 S1
+M42 P1 S0
+M42 P2 S0
 G4 P100
 
 M92 E600					;Set steps to 600mm/s
