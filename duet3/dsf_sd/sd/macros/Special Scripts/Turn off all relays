@@ -1,0 +1,8 @@
+
+echo "Turn off all relays"
+M18 ;ensure steppers are off before changing relays
+G4 P500
+M42 P0 S0
+M42 P1 S0
+M42 P2 S0
+G4 P500
