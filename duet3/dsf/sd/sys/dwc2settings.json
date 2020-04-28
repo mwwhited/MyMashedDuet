@@ -122,6 +122,7 @@
             "m409 K\"move.axes[1]\"",
             "m409 K\"move.axes[2]\"",
             "m409 K\"move.axes[3]\"",
+            "m409 K\"state\"",
             "m42 p0 s0",
             "m42 p0 s1",
             "m42 p1 s0",
