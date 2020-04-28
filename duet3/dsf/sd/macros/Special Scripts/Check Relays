@@ -1,0 +1,4 @@
+
+if state.currentTool = -1
+	if state.gpOut[0].pwm > 0 || state.gpOut[1].pwm > 0 || state.gpOut[2].pwm > 0
+		M98 P"0:/macros/Special Scripts/All Relays Off"
