@@ -26,14 +26,14 @@ M569 P0.0 S1                                            ; physical drive 0.0 goe
 M569 P0.3 S0                                            ; physical drive 0.3 goes backwards
 M569 P0.4 S0                                            ; physical drive 0.4 goes backwards
 M569 P0.5 S0                                            ; physical drive 0.5 goes backwards
-M584 X0.2 Y0.1 Z0.0 E0.3:0.4:0.5                     ; set drive mapping
-M350 X16 Y16 Z16 E16 I1                      ; configure microstepping with interpolation
-M92 X79.83 Y78.65 Z397.23 E600.00            ; set steps per mm
-M566 X900.00 Y900.00 Z12.00 E120.00          ; set maximum instantaneous speed changes (mm/min)
-M203 X6000.00 Y6000.00 Z900.00 E1200.00      ; set maximum speeds (mm/min)
-M201 X500.00 Y500.00 Z80.00 E250.00          ; set accelerations (mm/s^2)
-M906 X2000 Y2000 Z2000 E2000 I30                 ; set motor currents (mA) and motor idle factor in per cent
-M84 S30                                      ; Set idle timeout
+M584 X0.2 Y0.1 Z0.0 E0.3:0.4:0.5			; set drive mapping
+M350 X16 Y16 Z16 E16 I1					; configure microstepping with interpolation
+M92 X79.83 Y78.65 Z397.23 E600.00			; set steps per mm
+M566 X900.00 Y900.00 Z12.00 E120.00			; set maximum instantaneous speed changes (mm/min)
+M203 X60000 Y60000 Z3000 E6000				; set maximum speeds (mm/min)
+M201 X500.00 Y500.00 Z80.00 E250.00			; set accelerations (mm/s^2)
+M906 X2000 Y2000 Z2000 E2000 I30			; set motor currents (mA) and motor idle factor in per cent
+M84 S30							; Set idle timeout
 
 ; Axis Limits
 M208 X0 Y0 Z0 S1					; set axis minima
