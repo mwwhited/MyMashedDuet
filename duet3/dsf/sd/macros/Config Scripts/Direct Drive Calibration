@@ -9,7 +9,8 @@ M42 P1 S1
 M42 P2 S0
 G4 P100
 
-M92 E600					;Set steps to 600mm/s
+;M92 E600					;Set steps to 600mm/s
+M92 E909.0909
 M307 H1 A549.5 C243.9 D3.8 S1.0 V24.0 B0	;Set hotend
 
 ;Heater 1 model: gain 549.5, time constant 243.9, dead time 3.8, max PWM 1.00, calibration voltage 24.0, mode PID
