@@ -1,270 +1,122 @@
+duet3/dsf/sd/sys/dwc2settings.json
 {
-    "machine": {
-        "ajaxRetries": 2,
-        "babystepAmount": 0.05,
-        "codes": [
-            "G0 x00 y00 f30000",
-            "G0 x200 y0 f30000",
-            "G0 x200 y200 f6000",
-            "G1 E-2",
-            "G1 E-2.5",
-            "G1 E-200",
-            "G1 E-7.5",
-            "G1 E1",
-            "G1 E10",
-            "G1 E15",
-            "G1 E200",
-            "G1 E5",
-            "G1 E50",
-            "G1 e10",
-            "M106 C\"Power Supply\"  P3 H3 S1.0 L1.0 T35 B10",
-            "M106 C\"Power Supply\"  P3 H3 S1.0 L1.0 T35 B10.0",
-            "M106 C\"Power Supply\"  P3 H3 S1.0 L1.0 T35:45 B10",
-            "M106 C\"Power Supply\" P3 H3 S1.0 L1.0 T35:25 B10.0",
-            "M106 C\"Power Supply\" P3 H3 S1.0 L1.0 T35:30 B10.0",
-            "M106 C\"Power Supply\" P3 H3 S1.0 L1.0 T35:30 B100.0",
-            "M106 P3 H-1",
-            "M116",
-            "M18",
-            "M203 X24000 Y24000 Z6000 E6000",
-            "M203 X24000 Y3000 Z6000 E24000",
-            "M203 X30000 Y30000 Z3000 E6000",
-            "M203 X40000 Y40000 Z3000 E6000",
-            "M302",
-            "M302 P1",
-            "M408",
-            "M408 P4",
-            "M408 P5",
-            "M409",
-            "M42 P0 S0",
-            "M42 P0 S1",
-            "M42 P1 S0",
-            "M42 P1 S1",
-            "M42 P2 S0",
-            "M42 P2 S1",
-            "M582 T1",
-            "M912",
-            "M92 E1000",
-            "M92 E104.221",
-            "M92 E105.2632",
-            "M92 E1106.087",
-            "M92 E1173.1226",
-            "M92 E774.2609",
-            "M92 E93.2222",
-            "M92 E96.774",
-            "M92 E97.166",
-            "M92 E97.3278",
-            "M92 E98.7877",
-            "M92 E99.767",
-            "M92 z394.273",
-            "M950 F3 C\"out9\" Q1",
-            "M950 F3 C\"out9\" Q10",
-            "M950 F3 C\"out9\" Q1000",
-            "M950 F3 C\"out9\" Q10000",
-            "M950 F3 C\"out9\" Q200",
-            "M950 F3 C\"out9\" Q20000",
-            "M950 F3 C\"out9\" Q50",
-            "M950 F3 C\"out9\" Q500",
-            "M950 P0 C\"io6.out\"",
-            "M950 P0 C\"io7.out\"",
-            "M950 P0 C\"io8.out\"",
-            "M950 P1 C\"io7.out\"",
-            "M950 P2 C\"io8.out\"",
-            "T0",
-            "T3",
-            "echo fans[3]",
-            "echo move",
-            "echo move.axes[0].max/2",
-            "echo result",
-            "g0 e-300",
-            "g0 e100",
-            "g0 e200",
-            "g0 x(move.axes[0].max/2)",
-            "g0 x10",
-            "g0 x{move.axes[0].max/2}",
-            "g0 z10 x0 y200 f30000",
-            "g0 z10 x200 y000 f300000",
-            "g1 200",
-            "g1 e-100",
-            "g1 e-200",
-            "g1 e0:10",
-            "g1 e1",
-            "g1 e10",
-            "g1 e100",
-            "g1 e200",
-            "g1 e5",
-            "g28",
-            "g28 x",
-            "g28 z",
-            "m18",
-            "m18 e",
-            "m302",
-            "m302 p1",
-            "m302m302 p1",
-            "m307 h1",
-            "m409 K\"state\"",
-            "m409 K\"state.currentTool\"",
-            "m409 K\"state.gpOut\"",
-            "m409 K\"state.nextTool\"",
-            "m42 P0:1:2 S1",
-            "m42 P0:1:2 S1:1:1",
-            "m42 p0 s0",
-            "m42 p0 s1",
-            "m42 p1 s0",
-            "m42 p1 s1",
-            "m42 p2 s0",
-            "m42 p2 s1",
-            "m500",
-            "m83",
-            "m92",
-            "m92 100",
-            "m92 e600",
-            "m92 e900",
-            "m92 e96",
-            "t",
-            "t-1",
-            "t0",
-            "t3"
-        ],
-        "crcUploads": true,
-        "displayedExtraTemperatures": [
-            3
-        ],
-        "displayedExtruders": [
-            0,
-            1
-        ],
-        "displayedFans": [
-            -1
-        ],
-        "extendedUpdateEvery": 20,
-        "extruderAmounts": [
-            100,
-            50,
-            20,
-            10,
-            5,
-            1
-        ],
-        "extruderFeedrates": [
-            60,
-            30,
-            15,
-            5,
-            1
-        ],
-        "fileTransferRetryThreshold": 358400,
-        "moveFeedrate": 6000,
-        "moveSteps": {
-            "X": [
-                100,
-                50,
-                10,
-                1,
-                0.1
-            ],
-            "Y": [
-                100,
-                50,
-                10,
-                1,
-                0.1
-            ],
-            "Z": [
-                50,
-                25,
-                5,
-                0.5,
-                0.05
-            ],
-            "default": [
-                100,
-                50,
-                10,
-                1,
-                0.1
-            ]
-        },
-        "pingInterval": 2000,
-        "spindleRPM": [
-            10000,
-            75000,
-            5000,
-            2500,
-            1000,
+    "crcUploads": true, 
+    "codes": [], 
+    "temperatures": {
+        "chamber": [
+            90, 
+            80, 
+            70, 
+            60, 
+            50, 
+            40, 
             0
-        ],
-        "temperatures": {
-            "bed": {
-                "active": [
-                    110,
-                    100,
-                    90,
-                    70,
-                    65,
-                    60,
-                    0
-                ],
-                "standby": [
-                    40,
-                    30,
-                    0
-                ]
-            },
-            "chamber": [
-                90,
-                80,
-                70,
-                60,
-                50,
-                40,
+        ], 
+        "tool": {
+            "active": [
+                250, 
+                235, 
+                220, 
+                205, 
+                195, 
+                160, 
+                120, 
+                100, 
                 0
-            ],
-            "tool": {
-                "active": [
-                    250,
-                    235,
-                    220,
-                    205,
-                    195,
-                    160,
-                    120,
-                    100,
-                    0
-                ],
-                "standby": [
-                    210,
-                    180,
-                    160,
-                    140,
-                    0
-                ]
-            }
-        },
-        "updateInterval": 250
-    },
-    "main": {
-        "cacheSaveDelay": 4000,
-        "cacheStorageLocal": true,
-        "darkTheme": false,
-        "disableAutoComplete": false,
-        "language": "en",
-        "lastHostname": "duet3",
-        "notifications": {
-            "errorsPersistent": false,
-            "timeout": 5000
-        },
-        "settingsSaveDelay": 2000,
-        "settingsStorageLocal": false,
-        "useBinaryPrefix": true,
-        "webcam": {
-            "embedded": false,
-            "flip": "none",
-            "liveUrl": "",
-            "rotation": 0,
-            "updateInterval": 2000,
-            "url": "/image.jpg",
-            "useFix": false
+            ], 
+            "standby": [
+                210, 
+                180, 
+                160, 
+                140, 
+                0
+            ]
+        }, 
+        "bed": {
+            "active": [
+                110, 
+                100, 
+                90, 
+                70, 
+                65, 
+                60, 
+                0
+            ], 
+            "standby": [
+                40, 
+                30, 
+                0
+            ]
         }
-    }
+    }, 
+    "fileTransferRetryThreshold": 358400, 
+    "displayedExtraTemperatures": [
+        3
+    ], 
+    "ajaxRetries": 2, 
+    "displayedExtruders": [
+        0, 
+        1
+    ], 
+    "extendedUpdateEvery": 20, 
+    "moveSteps": {
+        "Y": [
+            100, 
+            50, 
+            10, 
+            1, 
+            0.1
+        ], 
+        "X": [
+            100, 
+            50, 
+            10, 
+            1, 
+            0.1
+        ], 
+        "default": [
+            100, 
+            50, 
+            10, 
+            1, 
+            0.1
+        ], 
+        "Z": [
+            50, 
+            25, 
+            5, 
+            0.5, 
+            0.05
+        ]
+    }, 
+    "babystepAmount": 0.05, 
+    "extruderAmounts": [
+        100, 
+        50, 
+        20, 
+        10, 
+        5, 
+        1
+    ], 
+    "pingInterval": 2000, 
+    "moveFeedrate": 6000, 
+    "spindleRPM": [
+        10000, 
+        75000, 
+        5000, 
+        2500, 
+        1000, 
+        0
+    ], 
+    "updateInterval": 250, 
+    "displayedFans": [
+        -1
+    ], 
+    "extruderFeedrates": [
+        60, 
+        30, 
+        15, 
+        5, 
+        1
+    ]
 }
