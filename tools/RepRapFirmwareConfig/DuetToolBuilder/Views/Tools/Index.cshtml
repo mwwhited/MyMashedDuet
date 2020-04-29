@@ -1,0 +1,31 @@
+﻿@model DuetToolBuilder.Controllers.ToolModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>@Model.MainBoard</h1>
+
+@*https://imagemap.org/*@
+
+
+
+<img src="~/content/duet3/duet3-motherboard.png" usemap="#image_map">
+
+<map name="image_map">
+    <area alt="Main Power" title="Main Power" href="#PowerIn" coords="654,104,753,282" shape="rect">
+    <area alt="Bed Power" title="Bed Power" href="#BedPowerIn" coords="763,101,859,280" shape="rect">
+    <area alt="Bed Heater" title="Bed Heater" href="#BedOut" coords="867,106,967,277" shape="rect">
+    <area alt="Driver 2" title="Driver 2" href="#Driver2" coords="202,276,341,364" shape="rect">
+    <area alt="Driver 1" title="Driver 1" href="#Driver1" coords="202,434,341,518" shape="rect">
+    <area alt="Driver 0" title="Driver 0" href="#Driver0" coords="202,592,338,677" shape="rect">
+    <area alt="Driver 3" title="Driver 3" href="#Driver3" coords="374,278,512,366" shape="rect">
+    <area alt="Driver 4" title="Driver 4" href="#Driver4" coords="374,436,511,519" shape="rect">
+    <area alt="Driver5" title="Driver5" href="#Driver5" coords="375,594,511,677" shape="rect">
+    <area alt="CAN Bus" title="CAN Bus" href="#CanBus" coords="914,399,1180,489" shape="rect">
+    <area alt="Daughter Board" title="Daughter Board" href="#Daughter" coords="833,495,868,568" shape="rect">
+    <area alt="SBC Header" title="SBC Header" href="#SBC" coords="961,519,1025,705" shape="rect">
+    <area alt="Heater 1" title="Heater 1" href="#Heater1" coords="152,737,332,786" shape="rect">
+</map>
+
+
+<h2 id="#"></h2>
