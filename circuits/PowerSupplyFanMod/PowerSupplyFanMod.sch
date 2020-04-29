@@ -1,0 +1,119 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Thermistor_NTC TH?
+U 1 1 5EA9054A
+P 4600 1550
+F 0 "TH?" H 4698 1596 50  0000 L CNN
+F 1 "Thermistor_NTC" H 4698 1505 50  0000 L CNN
+F 2 "" H 4600 1600 50  0001 C CNN
+F 3 "~" H 4600 1600 50  0001 C CNN
+	1    4600 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_Push_DPDT SW?
+U 1 1 5EA90BF8
+P 4400 2750
+F 0 "SW?" V 4446 2362 50  0000 R CNN
+F 1 "SW_Push_DPDT" V 4355 2362 50  0000 R CNN
+F 2 "" H 4400 2950 50  0001 C CNN
+F 3 "~" H 4400 2950 50  0001 C CNN
+	1    4400 2750
+	-1   0    0    1   
+$EndComp
+$Comp
+L Motor:Fan M?
+U 1 1 5EA91487
+P 5350 2800
+F 0 "M?" H 5508 2896 50  0000 L CNN
+F 1 "Fan" H 5508 2805 50  0000 L CNN
+F 2 "" H 5350 2810 50  0001 C CNN
+F 3 "~" H 5350 2810 50  0001 C CNN
+	1    5350 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 5EA91AD2
+P 3800 2950
+F 0 "J?" H 3908 3131 50  0000 C CNN
+F 1 "Conn_01x02_Male" H 3908 3040 50  0000 C CNN
+F 2 "" H 3800 2950 50  0001 C CNN
+F 3 "~" H 3800 2950 50  0001 C CNN
+	1    3800 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J?
+U 1 1 5EA8F93B
+P 3600 1400
+F 0 "J?" H 3708 1681 50  0000 C CNN
+F 1 "Conn_01x04_Male" H 3708 1590 50  0000 C CNN
+F 2 "" H 3600 1400 50  0001 C CNN
+F 3 "~" H 3600 1400 50  0001 C CNN
+	1    3600 1400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 2550 4900 2550
+Wire Wire Line
+	4900 2550 4900 2250
+Wire Wire Line
+	4900 2250 5350 2250
+Wire Wire Line
+	5350 2250 5350 2500
+Wire Wire Line
+	5350 3000 5350 3150
+Wire Wire Line
+	5350 3150 4900 3150
+Wire Wire Line
+	4900 3150 4900 2950
+Wire Wire Line
+	4900 2950 4600 2950
+Wire Wire Line
+	4000 3050 4200 3050
+Wire Wire Line
+	4150 2950 4150 2850
+Wire Wire Line
+	4150 2850 4200 2850
+Wire Wire Line
+	4000 2950 4150 2950
+Wire Wire Line
+	3800 1300 4600 1300
+Wire Wire Line
+	4600 1300 4600 1400
+Wire Wire Line
+	4600 1700 4600 1850
+Wire Wire Line
+	4600 1850 4350 1850
+Wire Wire Line
+	4350 1850 4350 1400
+Wire Wire Line
+	4350 1400 3800 1400
+Wire Wire Line
+	3800 1500 4000 1500
+Wire Wire Line
+	4000 1500 4000 2450
+Wire Wire Line
+	4000 2450 4200 2450
+Wire Wire Line
+	4200 2650 3950 2650
+Wire Wire Line
+	3950 2650 3950 1600
+Wire Wire Line
+	3950 1600 3800 1600
+$EndSCHEMATC
