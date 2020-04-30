@@ -62,7 +62,8 @@ M558 P0 H5 F120 T6000					; disable Z probe but set dive height, probe speed and
 M557 X15:195 Y15:195 S20				; define mesh grid
 
 ; Heaters
-M308 S0 P"temp0" Y"thermistor" T100000 B4138 A"Bed"     ; configure sensor 0 as thermistor on pin temp0
+;M308 S0 P"temp0" Y"thermistor" T100000 B4138 A"Bed"     ; configure sensor 0 as thermistor on pin temp0
+M308 S0 P"temp0" Y"thermistor" T100000 B3950 A"Bed"     ; configure sensor 0 as thermistor on pin temp0
 M950 H0 C"out0" T0                                      ; create bed heater output on out0 and map it to sensor 0
 M143 H0 S120                                            ; set temperature limit for heater 0 to 120C
 M307 H0 B0 S1.00                                        ; disable bang-bang mode for the bed heater and set PWM limit
