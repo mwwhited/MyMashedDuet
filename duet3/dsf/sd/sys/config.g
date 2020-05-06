@@ -40,9 +40,9 @@ M208 X0 Y0 Z0 S1					; set axis minima
 M208 X200 Y200 Z200 S0					; set axis maxima
 
 ; Endstops
-M574 X1 S1 P"^io4.in"					; configure active-high endstop for low end on X via pin ^io4.in
-M574 Y1 S1 P"^io2.in"					; configure active-high endstop for low end on Y via pin ^io2.in
-M574 Z1 S1 P"^io0.in"					; configure active-high endstop for low end on Z via pin ^io0.in
+M574 X1 S1 P"^io4.in+^io5.in"				; configure active-high endstop for low end on X via pin ^io4.in
+M574 Y1 S1 P"^io2.in+^io3.in"				; configure active-high endstop for low end on Y via pin ^io2.in
+M574 Z1 S1 P"^io0.in+^io1.in"				; configure active-high endstop for low end on Z via pin ^io0.in
 
 ;M574 X2 S1 P"^io5.in"					; configure active-high endstop for high end on X via pin ^io5.in
 ;M574 Y2 S1 P"^io3.in"					; configure active-high endstop for high end on Y via pin ^io3.in
