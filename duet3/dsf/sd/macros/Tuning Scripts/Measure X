@@ -25,3 +25,4 @@ G1 X-250 H1 F360	; Home x to 0 "slowly"
 
 G90               ; absolute positioning
 G0  X{move.axes[0].max/2} F20000	; move center
+M208
