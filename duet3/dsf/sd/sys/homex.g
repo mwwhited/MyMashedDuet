@@ -10,12 +10,18 @@
 ;G1 H2 Z-5 F6000   ; lower Z again
 ;G90               ; absolute positioning
 
+
+M208 X0 Y0 Z0 S1					; set axis minima
+M208 X200 Y200 Z200 S0					; set axis maxima
+
 G91					; relative positioning
-M208 X0:250				; X set 0 to 250
+M208 X0 S1				; X set minimum to 0
+M208 X250 S0				; X set maximum to 250
 G1 X-250 H1 F1800			; Home x to 0 "quickly"
-G1 X5					; Move off endstop
+G1 X5 F360				; Move off endstop
 G1 X-250 H1 F360			; Home x to 0 "slowly"
-G1 X300 H2 F1800			; measure X
+G1 X5 F360				; Move off endstop
+G1 X300 H3 F1800			; measure X
 
 ;G0  X{move.axes[0].max/2} F20000	; move center
 echo move.axes[0].min
