@@ -15,7 +15,7 @@ G1 X-250 Y-250 Z-250 H1 F360	; Home to 0 "slowly"
 ; measure max
 M574 X2 Y2 Z2 S1		; set high endstops
 G1 X5 Y5 Z5 F360		; back off endstops
-G1 X300 Y300 Z300 H3 F900	; measure XYZ
+G1 X300 Y300 Z300 H3 F360	; measure XYZ
 G1 X-5 Y-5 Z-5 F360		; back off endstop 
 
 ;home min
