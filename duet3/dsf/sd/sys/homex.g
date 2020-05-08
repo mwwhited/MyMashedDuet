@@ -10,10 +10,16 @@
 ;G1 H2 Z-5 F6000   ; lower Z again
 ;G90               ; absolute positioning
 
-M208 X0:250				; X to 0 - 250
-G1 X-250 H1				; Home x to 0
+G91					; relative positioning
+M208 X0:250				; X set 0 to 250
+G1 X-250 H1 F1800			; Home x to 0 "quickly"
 G1 X5					; Move off endstop
-G1 X300 H3				; measure X
+G1 X-250 H1 F360			; Home x to 0 "slowly"
+G1 X300 H2 F1800			; measure X
+
 ;G0  X{move.axes[0].max/2} F20000	; move center
 echo move.axes[0].min
+echo move.axes[0].max
 ;M208 X0:{move.axes[0].min}
+
+G90               ; absolute positioning
