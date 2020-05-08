@@ -14,4 +14,5 @@ M208 X0:250				; X to 0 - 250
 G1 X-250 H1				; Home x to 0
 G1 X5					; Move off endstop
 G1 X300 H3				; measure X
-G0  X{move.axes[0].max/2} F20000	; move center
+;G0  X{move.axes[0].max/2} F20000	; move center
+M208 X0:{move.axes[0].min}
