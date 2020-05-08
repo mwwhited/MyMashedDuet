@@ -25,4 +25,4 @@ G1 Z5 F360		; back off endstop
 G1 Z-250 H1 F360	; Home x to 0 "slowly"
 
 G90               ; absolute positioning
-G0  Z{move.axes[1].max/2} F20000	; move center
+G0  Z{move.axes[2].max/2} F20000	; move center

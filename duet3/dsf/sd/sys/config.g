@@ -37,7 +37,7 @@ M84 S30							; Set idle timeout
 
 ; Axis Limits
 M208 X0 Y0 Z0 S1					; set axis minima
-M208 X200 Y200 Z200 S0					; set axis maxima
+M208 X216 Y200 Z219 S0					; set axis maxima
 
 ; Endstops
 M574 X1 S1 P"^io4.in+^io5.in"				; configure active-high endstop for low end on X via pin ^io4.in
