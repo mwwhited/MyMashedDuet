@@ -1,0 +1,28 @@
+; homez.g
+; called to home and measure the Z axis
+;
+
+G91				; relative positioning
+M208 X0 Y0 Z0 S1		; Z set minimum to 0
+M208 X250 Y250 Z250 S0		; Z set maximum to 250
+
+;home min
+M574 X1 Y1 Z1 S1		; set low endstops
+G1 X-250 Y-250 Z-250 H1 F1800	; Home to 0 "quickly"
+G1 X5 Y5 Z5 F360		; back off endstops
+G1 X-250 Y-250 Z-250 H1 F360	; Home to 0 "slowly"
+
+; measure max
+M574 X2 Y2 Z2 S1		; set high endstops
+G1 X5 Y5 Z5 F360		; back off endstops
+G1 X300 Y300 Z300 H3 F900	; measure XYZ
+G1 X-5 Y-5 Z-5 F360		; back off endstop 
+
+;home min
+M574 X1 Y1 Z1 S1		; set low endstop
+G1 X-250 Y-250 Z-250 H1 F1800	; Home to 0 "quickly"
+G1 X5 Y5 Z5 F360		; back off endstop
+G1 X-250 Y-250 Z-250 H1 F360	; Home to 0 "slowly"
+
+G90               		; absolute positioning
+G0 X{move.axes[0].max/2} Y{move.axes[1].max/2} Z{move.axes[2].max/2} F20000	; move center
