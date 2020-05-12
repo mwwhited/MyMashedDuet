@@ -1,0 +1,5 @@
+; If the printer hasn't been homed, home it
+if !move.axes[0].homed || !move.axes[1].homed || !move.axes[2].homed
+  G28
+
+G0 X{move.axes[0].max/2} Y{move.axes[1].max/2} F20000	; move center
