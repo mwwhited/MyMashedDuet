@@ -7,8 +7,13 @@ G91			; relative positioning
 ;home min
 M574 X1 S1		; set low endstop
 G1 X-250 H1 F1800	; Home x to 0 "quickly"
+
 M574 X2 S1		; set high endstop
 G1 X5 H1 F360		; back off endstop
+G90               	; absolute positioning
+G1 X5 F1800; back off endstop
+G91			; relative positioning
+
 M574 X1 S1		; set low endstop
 G1 X-250 H1 F360	; Home x to 0 "slowly"
 
