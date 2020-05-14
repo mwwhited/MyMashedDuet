@@ -37,25 +37,12 @@ M84 S30							; Set idle timeout
 
 ; Axis Limits
 M208 X0 Y0 Z0 S1					; set axis minima
-M208 X216 Y200 Z219 S0					; set axis maxima
+M208 X216 Y199 Z219 S0					; set axis maxima
 
 ; Endstops
 M574 X1 S1 P"^io4.in+^io5.in"				; configure active-high endstop for low end on X via pin ^io4.in
 M574 Y1 S1 P"^io2.in+^io3.in"				; configure active-high endstop for low end on Y via pin ^io2.in
 M574 Z1 S1 P"^io0.in+^io1.in"				; configure active-high endstop for low end on Z via pin ^io0.in
-
-;M574 X2 S1 P"^io5.in"					; configure active-high endstop for high end on X via pin ^io5.in
-;M574 Y2 S1 P"^io3.in"					; configure active-high endstop for high end on Y via pin ^io3.in
-;M574 Z2 S1 P"^io1.in"					; configure active-high endstop for high end on Z via pin ^io1.in
-
-; https://duet3d.dozuki.com/Wiki/Gcode?revisionid=HEAD#Section_M950_Create_heater_fan_or_GPIO_servo_pin
-; https://duet3d.dozuki.com/Wiki/Gcode?revisionid=HEAD#Section_M581_Configure_external_trigger
-;M950 J1 C"^io5.in"	; X high end endstop
-;M950 J2 C"^io3.in"	; Y high end endstop
-;M950 J3 C"^io1.in"	; Z high end endstop
-;M581 P1 T4 S1 C0
-;M581 P2 T2 S1 C0
-;M581 P3 T3 S1 C0
 
 ; Z-Probe
 M558 P0 H5 F120 T6000					; disable Z probe but set dive height, probe speed and travel speed
