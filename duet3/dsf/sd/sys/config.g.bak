@@ -99,46 +99,42 @@ M563 P0 S"Direct Drive" D1 H1 F0                        ; define tool 0
 G10 P0 X0 Y0 Z0                                         ; set tool 0 axis offsets
 G10 P0 R0 S0                                            ; set initial tool 0 active and standby temperatures to 0C
 
-;M563 P1 S"3mm Bowden" D0 H1 F0                          ; define tool 1
-;G10 P1 X0 Y0 Z0                                         ; set tool 1 axis offsets
-;G10 P1 R0 S0                                            ; set initial tool 1 active and standby temperatures to 0C
+M563 P1 S"3mm Bowden" D0 H1 F0                          ; define tool 1
+G10 P1 X0 Y0 Z0                                         ; set tool 1 axis offsets
+G10 P1 R0 S0                                            ; set initial tool 1 active and standby temperatures to 0C
 
-;M563 P2 S"Dual 1.75 Bowden" D0:1 H1:2 F0                ; define tool 2
-;G10 P2 X0 Y0 Z0                                         ; set tool 2 axis offsets
-;G10 P2 R0 S0                                            ; set initial tool 2 active and standby temperatures to 0C
-;M568 P2 S1                                              ; enable mixing for tool 2
-;M567 P2 E0.5:0.5                                        ; set mixing ratios for tool 2
+M563 P2 S"Dual 1.75 Bowden" D0:1 H1:2 F0                ; define tool 2
+G10 P2 X0 Y0 Z0                                         ; set tool 2 axis offsets
+G10 P2 R0 S0                                            ; set initial tool 2 active and standby temperatures to 0C
+M568 P2 S1                                              ; enable mixing for tool 2
+M567 P2 E0.5:0.5                                        ; set mixing ratios for tool 2
 
-;M563 P3 S"3 Color" D0:1:2 H1 F0                         ; define tool 3
-;G10 P3 X0 Y0 Z0                                         ; set tool 3 axis offsets
-;G10 P3 R0 S0                                            ; set initial tool 3 active and standby temperatures to 0C
-;M568 P3 S1                                              ; enable mixing for tool 3
-;M567 P3 E0.33:0.33:0.34                                 ; set mixing ratios for tool 3
+M563 P3 S"3 Color" D0:1:2 H1 F0                         ; define tool 3
+G10 P3 X0 Y0 Z0                                         ; set tool 3 axis offsets
+G10 P3 R0 S0                                            ; set initial tool 3 active and standby temperatures to 0C
+M568 P3 S1                                              ; enable mixing for tool 3
+M567 P3 E0.33:0.33:0.34                                 ; set mixing ratios for tool 3
 
-;bank 1
-M563 P10 S"Extruder 0" D0 H1 F0                          ; define tool 4
-G10 P10 X0 Y0 Z0                                         ; set tool 4 axis offsets
-G10 P10 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
-M563 P11 S"Extruder 1" D1 H1 F0                          ; define tool 4
-G10 P11 X0 Y0 Z0                                         ; set tool 4 axis offsets
-G10 P11 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
-M563 P12 S"Extruder 2" D2 H1 F0                          ; define tool 4
-G10 P12 X0 Y0 Z0                                         ; set tool 4 axis offsets
-G10 P12 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
-;bank 2
-M563 P13 S"Extruder 3" D0 H1 F0                          ; define tool 4
-G10 P13 X0 Y0 Z0                                         ; set tool 4 axis offsets
-G10 P13 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
-M563 P14 S"Extruder 4" D1 H1 F0                          ; define tool 4
-G10 P14 X0 Y0 Z0                                         ; set tool 4 axis offsets
-G10 P14 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
-M563 P15 S"Extruder 5" D2 H1 F0                          ; define tool 4
-G10 P15 X0 Y0 Z0                                         ; set tool 4 axis offsets
-G10 P15 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
-
-
-
-
+;;bank 1
+;M563 P10 S"Extruder 0" D0 H1 F0                          ; define tool 4
+;G10 P10 X0 Y0 Z0                                         ; set tool 4 axis offsets
+;G10 P10 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
+;M563 P11 S"Extruder 1" D1 H1 F0                          ; define tool 4
+;G10 P11 X0 Y0 Z0                                         ; set tool 4 axis offsets
+;G10 P11 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
+;M563 P12 S"Extruder 2" D2 H1 F0                          ; define tool 4
+;G10 P12 X0 Y0 Z0                                         ; set tool 4 axis offsets
+;G10 P12 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
+;;bank 2
+;M563 P13 S"Extruder 3" D0 H1 F0                          ; define tool 4
+;G10 P13 X0 Y0 Z0                                         ; set tool 4 axis offsets
+;G10 P13 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
+;M563 P14 S"Extruder 4" D1 H1 F0                          ; define tool 4
+;G10 P14 X0 Y0 Z0                                         ; set tool 4 axis offsets
+;G10 P14 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
+;M563 P15 S"Extruder 5" D2 H1 F0                          ; define tool 4
+;G10 P15 X0 Y0 Z0                                         ; set tool 4 axis offsets
+;G10 P15 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
 
 ; Custom settings are not defined
 
