@@ -6,7 +6,9 @@ M42 P1 S0 ; Ensure relay 1 is off
 M42 P2 S0 ; Ensure relay 2 is off
 G4 P100
 
+;remove all tools
 while iterations < #tools
+	echo "Removing Tool ", tools[iterations].name, "T", iterations
 	M563 P{iterations} D-1 H-1
 
 ;disable heaters
@@ -14,7 +16,8 @@ M308 S1 P"nil"
 M950 H1 C"nil"
 M950 H2 C"nil"
 
-;disable fans
-M950 F0 C"nil"
-M950 F1 C"nil"
-M950 F2 C"nil"
+;remove fans
+while iterations < #fans
+	if fans[iterations ].name != "Power Supply"
+		echo "Removing Fan", fans[iterations].name, "F", iterations
+		M950 F{iterations } C"nil"
