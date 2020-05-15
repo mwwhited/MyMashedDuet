@@ -18,8 +18,6 @@ while iterations < #tools
 
 ;disable heaters
 while iterations < #heat.heaters
-	echo "HXX"
-	echo "Heaters", heat.heaters[iterations]
 	if heat.heaters[iterations] != null && heat.bedHeaters[0] != iterations
 		echo "Removing Heater", heat.heaters[iterations], "H", iterations
 		M950 H{iterations} C"nil"
