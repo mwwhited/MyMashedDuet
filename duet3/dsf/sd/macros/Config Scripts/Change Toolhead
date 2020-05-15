@@ -11,10 +11,16 @@ while iterations < #tools
 	echo "Removing Tool ", tools[iterations].name, "T", iterations
 	M563 P{iterations} D-1 H-1
 
+
+;{"key":"heat","flags":"","result":{"bedHeaters":[1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],"chamberHeaters":[-1,-1,-1,-1],"coldExtrudeTemperature":160.0,"coldRetractTemperature":90.0,"heaters":[null,{"active":0,"current":25.1,"max":125.0,"min":-273.1,"monitors":[{"action":0,"condition":"tooHigh","limit":125.0},{"condition":"disabled"},{"condition":"disabled"}],"sensor":0,"standby":0,"state":"off"}]}}
+
 ;disable heaters
-M308 S1 P"nil"
-M950 H1 C"nil"
-M950 H2 C"nil"
+while iterations < #heat.heaters
+	if head.bedHeaters[0] != iterations && heat.heaters[iterations]
+		echo "Removing Heater", heat.heaters[iterations].name, "H", iterations
+		M950 H{iterations} C"nil"
+		
+;M308 S1 P"nil"
 
 ;remove fans
 while iterations < #fans
