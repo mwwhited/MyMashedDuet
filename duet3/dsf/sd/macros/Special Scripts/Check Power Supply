@@ -1,5 +1,5 @@
 
-if fans[3].actualValue > 0.0 && sensors.analog[3].lastReading < 27
+if fans[3].actualValue > 0.0 && sensors.analog[3].lastReading < 28
     ;echo "fan running and temp less than 80F... stop fan"
     M106 P3 S0.0
 elif fans[3].actualValue < 0.5 && sensors.analog[3].lastReading > 35
