@@ -8,7 +8,6 @@ G4 P100
 
 while iterations < #tools
 	M563 P{iterations} D-1 H-1
-	echo iterations 
 
 ;disable heaters
 M308 S1 P"nil"
