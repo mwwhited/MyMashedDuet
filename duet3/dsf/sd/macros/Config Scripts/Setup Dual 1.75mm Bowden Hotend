@@ -1,11 +1,16 @@
 
+;real center 108, 99.6
+;tool center 104, 89.5
+;nozzel to nozzel 18mm
+
+
 M563 P0 S"Dual - Right" D0 H1 F0	; define tool 0
-G10 P0 X9 Y0 Z0				; set tool 0 axis offsets
+G10 P0 X13 Y10 Z0				; set tool 0 axis offsets
 G10 P0 R0 S0				; set initial tool 0 active and standby temperatures to 0C
 M568 P0 S0				; enable mixing for tool 0
 
 M563 P1 S"Dual - Left" D1 H2 F0 	; define tool 1
-G10 P1 X-9 Y0 Z0			; set tool 1 axis offsets
+G10 P1 X-5 Y10 Z0			; set tool 1 axis offsets
 G10 P1 R0 S0				; set initial tool 1 active and standby temperatures to 0C
 M568 P1 S0				; enable mixing for tool 1
 
