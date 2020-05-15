@@ -1,12 +1,11 @@
 M98 P"0:/macros/Config Scripts/Tool Setups/Enable Heater 1"
-;M98 P"0:/macros/Config Scripts/Tool Setups/Disable Heater 2"
+M98 P"0:/macros/Config Scripts/Tool Setups/Disable Heater 2"
 
-M563 P0 S"3 Color" D0:1:2 H1 F0                         ; define tool 0
-G10 P0 X0 Y-19 Z0                                         ; set tool 0 axis offsets
-G10 P0 R0 S0                                            ; set initial tool 0 active and standby temperatures to 0C
-M568 P0 S1                                              ; enable mixing for tool 0
-M567 P0 E0.33:0.33:0.34                                 ; set mixing ratios for tool 
-M563 P1 D-1 H-1						; remove tool 1
+M563 P0 S"3 Color" D0:1:2 H1 F0		; define tool 0
+G10 P0 X0 Y-19 Z0			; set tool 0 axis offsets
+G10 P0 R0 S0				; set initial tool 0 active and standby temperatures to 0C
+M567 P0 E0.33:0.33:0.34			; set mixing ratios for tool 
+M563 P1 D-1 H-1				; remove tool 1
 
 ;Tuning result for heaters
 M307 H1 A424.6 C236.6 D6.6 S1.0 V24.0 B0 ; tune heater for reprap diamond
