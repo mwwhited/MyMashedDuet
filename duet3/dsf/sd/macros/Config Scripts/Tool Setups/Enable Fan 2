@@ -1,0 +1,3 @@
+
+M950 F1 C"out8" Q500					; create fan 1 on pin out8 and set its frequency
+M106 P1 S0 H2 C"HTF2"					; set fan 1 value. Thermostatic control is turned on

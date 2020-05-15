@@ -11,6 +11,7 @@ while iterations < #tools
 	echo iterations 
 
 ;disable heaters
+M308 S1 P"nil"
 M950 H1 C"nil"
 M950 H2 C"nil"
 
