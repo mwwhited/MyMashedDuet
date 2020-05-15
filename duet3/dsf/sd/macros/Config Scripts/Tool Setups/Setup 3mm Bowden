@@ -2,3 +2,14 @@
 M563 P0 S"3mm Bowden" D0 H1 F0                          ; define tool 0
 G10 P0 X0 Y0 Z0                                         ; set tool 0 axis offsets
 G10 P0 R0 S0                                            ; set initial tool 0 active and standby temperatures to 0C
+
+M92 E97.3278						; Feed rate
+
+M18 E ; turn off steppers for extruders
+G4 P200
+M42 P0 S1
+M42 P1 S0
+M42 P2 S0
+G4 P200
+
+echo "Configured for 3mm Bowden"
