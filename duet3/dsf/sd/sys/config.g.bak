@@ -40,14 +40,6 @@ M574 Z1 S1 P"^io0.in+^io1.in"				; configure active-high endstop for low end on 
 M558 P0 H5 F120 T6000					; disable Z probe but set dive height, probe speed and travel speed
 M557 X15:195 Y15:195 S20				; define mesh grid
 
-; Heaters
-;M308 S0 P"temp0" Y"thermistor" T100000 B4138 A"Bed"     ; configure sensor 0 as thermistor on pin temp0
-M308 S0 P"temp0" Y"thermistor" T100000 B3950 A"Bed"     ; configure sensor 0 as thermistor on pin temp0
-M950 H0 C"out0" T0                                      ; create bed heater output on out0 and map it to sensor 0
-M143 H0 S120                                            ; set temperature limit for heater 0 to 120C
-M307 H0 B0 S1.00                                        ; disable bang-bang mode for the bed heater and set PWM limit
-M140 H0                                                 ; map heated bed to heater 0
-
 ;HTF1
 M308 S1 P"temp1" Y"thermistor" T100000 B4138 A"HTF1"	; configure sensor 1 as thermistor on pin temp1
 M950 H1 C"out1" T1                                      ; create nozzle heater output on out1 and map it to sensor 1
@@ -73,26 +65,7 @@ M308 S3 P"temp3" Y"thermistor" T100000 B4138 A"PS"	; configure sensor 3 as therm
 M950 F3 C"out9" Q500                                    ; create fan 3 on pin out9 and set its frequency
 M106 C"Power Supply" P3 H-1 S0.0			; Power supply fan (3) linked to pwoer supply temp (3) Turn on at 35C
 
-;; Tools
-;M563 P0 S"Direct Drive" D1 H1 F0                        ; define tool 0
-;G10 P0 X0 Y0 Z0                                         ; set tool 0 axis offsets
-;G10 P0 R0 S0                                            ; set initial tool 0 active and standby temperatures to 0C
-;
-;M563 P1 S"3mm Bowden" D0 H1 F0                          ; define tool 1
-;G10 P1 X0 Y0 Z0                                         ; set tool 1 axis offsets
-;G10 P1 R0 S0                                            ; set initial tool 1 active and standby temperatures to 0C
-;
-;M563 P2 S"Dual 1.75 Bowden" D0:1 H1:2 F0                ; define tool 2
-;G10 P2 X0 Y0 Z0                                         ; set tool 2 axis offsets
-;G10 P2 R0 S0                                            ; set initial tool 2 active and standby temperatures to 0C
-;M568 P2 S1                                              ; enable mixing for tool 2
-;M567 P2 E0.5:0.5                                        ; set mixing ratios for tool 2
-;
-;M563 P3 S"3 Color" D0:1:2 H1 F0                         ; define tool 3
-;G10 P3 X0 Y0 Z0                                         ; set tool 3 axis offsets
-;G10 P3 R0 S0                                            ; set initial tool 3 active and standby temperatures to 0C
-;M568 P3 S1                                              ; enable mixing for tool 3
-;M567 P3 E0.33:0.33:0.34                                 ; set mixing ratios for tool 3
+; Tools
 
 ; Configure outputs for Relay Controller
 M950 P0 C"io6.out"					; setup relay 0

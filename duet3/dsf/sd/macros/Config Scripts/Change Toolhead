@@ -9,3 +9,12 @@ G4 P100
 while iterations < #tools
 	M563 P{iterations} D-1 H-1
 	echo iterations 
+
+;disable heaters
+M950 H1 C"nil"
+M950 H2 C"nil"
+
+;disable fans
+M950 F0 C"nil"
+M950 F1 C"nil"
+M950 F2 C"nil"
