@@ -102,27 +102,6 @@ G10 P3 R0 S0                                            ; set initial tool 3 act
 M568 P3 S1                                              ; enable mixing for tool 3
 M567 P3 E0.33:0.33:0.34                                 ; set mixing ratios for tool 3
 
-;;bank 1
-;M563 P10 S"Extruder 0" D0 H1 F0                          ; define tool 4
-;G10 P10 X0 Y0 Z0                                         ; set tool 4 axis offsets
-;G10 P10 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
-;M563 P11 S"Extruder 1" D1 H1 F0                          ; define tool 4
-;G10 P11 X0 Y0 Z0                                         ; set tool 4 axis offsets
-;G10 P11 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
-;M563 P12 S"Extruder 2" D2 H1 F0                          ; define tool 4
-;G10 P12 X0 Y0 Z0                                         ; set tool 4 axis offsets
-;G10 P12 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
-;;bank 2
-;M563 P13 S"Extruder 3" D0 H1 F0                          ; define tool 4
-;G10 P13 X0 Y0 Z0                                         ; set tool 4 axis offsets
-;G10 P13 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
-;M563 P14 S"Extruder 4" D1 H1 F0                          ; define tool 4
-;G10 P14 X0 Y0 Z0                                         ; set tool 4 axis offsets
-;G10 P14 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
-;M563 P15 S"Extruder 5" D2 H1 F0                          ; define tool 4
-;G10 P15 X0 Y0 Z0                                         ; set tool 4 axis offsets
-;G10 P15 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
-
 ; Custom settings are not defined
 
 ; Configure outpus for Relay Controller
@@ -135,6 +114,9 @@ M42 P0 S0
 M42 P1 S0
 M42 P2 S0
 
+M98 P"0:/macros/Config Scripts/Heated Bed - 200x200 Glass"
+
+; Execute config-override.g
 M501										 ; Execute config-override.g
 
 
