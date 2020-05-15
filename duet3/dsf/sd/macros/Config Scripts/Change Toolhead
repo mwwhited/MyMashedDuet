@@ -1,6 +1,3 @@
-sensors.analog[0].lastReading
-
-
 ;check tempertures
 while iterations < #sensors.analog
 	if sensors.analog[iterations] != null && sensors.analog[iterations].lastReading > 30
@@ -18,9 +15,6 @@ G4 P100
 while iterations < #tools
 	echo "Removing Tool ", tools[iterations].name, "T", iterations
 	M563 P{iterations} D-1 H-1
-
-
-;{"key":"heat","flags":"","result":{"bedHeaters":[1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1],"chamberHeaters":[-1,-1,-1,-1],"coldExtrudeTemperature":160.0,"coldRetractTemperature":90.0,"heaters":[null,{"active":0,"current":25.1,"max":125.0,"min":-273.1,"monitors":[{"action":0,"condition":"tooHigh","limit":125.0},{"condition":"disabled"},{"condition":"disabled"}],"sensor":0,"standby":0,"state":"off"}]}}
 
 ;disable heaters
 while iterations < #heat.heaters
