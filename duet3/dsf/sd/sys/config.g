@@ -40,25 +40,25 @@ M574 Z1 S1 P"^io0.in+^io1.in"				; configure active-high endstop for low end on 
 M558 P0 H5 F120 T6000					; disable Z probe but set dive height, probe speed and travel speed
 M557 X15:195 Y15:195 S20				; define mesh grid
 
-;HTF1
-M308 S1 P"temp1" Y"thermistor" T100000 B4138 A"HTF1"	; configure sensor 1 as thermistor on pin temp1
-M950 H1 C"out1" T1                                      ; create nozzle heater output on out1 and map it to sensor 1
-M143 H1 S280                                            ; set temperature limit for heater 1 to 280C
-M307 H1 B0 S1.00                                        ; disable bang-bang mode for heater  and set PWM limit
-M950 F0 C"out7" Q500                                    ; create fan 0 on pin out7 and set its frequency
-M106 P0 S0 H1 C"HTF1"					; set fan 0 value. Thermostatic control is turned off
-
-;HTF2
-M308 S2 P"temp2" Y"thermistor" T100000 B4138 A"HTF2"	; configure sensor 2 as thermistor on pin temp2
-M950 H2 C"out2" T2                                      ; create nozzle heater output on out2 and map it to sensor 2
-M143 H2 S280                                            ; set temperature limit for heater 2 to 280C
-M307 H2 B0 S1.00                                        ; disable bang-bang mode for heater  and set PWM limit
-M950 F1 C"out8" Q500					; create fan 1 on pin out8 and set its frequency
-M106 P1 S0 H2 C"HTF2"					; set fan 1 value. Thermostatic control is turned on
-
-; Fan 3
-M950 F2 C"out4" Q50					; create fan 2 on pin out4 and set its frequency
-M106 P2 S0 H1-1 C"Fan 3"				; set fan 2 value. Thermostatic control is turned on
+;;HTF1
+;M308 S1 P"temp1" Y"thermistor" T100000 B4138 A"HTF1"	; configure sensor 1 as thermistor on pin temp1
+;M950 H1 C"out1" T1                                      ; create nozzle heater output on out1 and map it to sensor 1
+;M143 H1 S280                                            ; set temperature limit for heater 1 to 280C
+;M307 H1 B0 S1.00                                        ; disable bang-bang mode for heater  and set PWM limit
+;M950 F0 C"out7" Q500                                    ; create fan 0 on pin out7 and set its frequency
+;M106 P0 S0 H1 C"HTF1"					; set fan 0 value. Thermostatic control is turned off
+;
+;;HTF2
+;M308 S2 P"temp2" Y"thermistor" T100000 B4138 A"HTF2"	; configure sensor 2 as thermistor on pin temp2
+;M950 H2 C"out2" T2                                      ; create nozzle heater output on out2 and map it to sensor 2
+;M143 H2 S280                                            ; set temperature limit for heater 2 to 280C
+;M307 H2 B0 S1.00                                        ; disable bang-bang mode for heater  and set PWM limit
+;M950 F1 C"out8" Q500					; create fan 1 on pin out8 and set its frequency
+;M106 P1 S0 H2 C"HTF2"					; set fan 1 value. Thermostatic control is turned on
+;
+;; Fan 3
+;M950 F2 C"out4" Q50					; create fan 2 on pin out4 and set its frequency
+;M106 P2 S0 H1-1 C"Fan 3"				; set fan 2 value. Thermostatic control is turned on
 
 ;Power Supply
 M308 S3 P"temp3" Y"thermistor" T100000 B4138 A"PS"	; configure sensor 3 as thermistor on pin temp3 for Power supply
