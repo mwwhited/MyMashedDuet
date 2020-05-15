@@ -16,7 +16,7 @@ while iterations < #tools
 
 ;disable heaters
 while iterations < #heat.heaters
-	if heat.bedHeaters[0] != iterations && heat.heaters[iterations]
+	if heat.heaters[iterations] != null && heat.bedHeaters[0] != iterations
 		echo "Removing Heater", heat.heaters[iterations].name, "H", iterations
 		M950 H{iterations} C"nil"
 		
@@ -24,6 +24,6 @@ while iterations < #heat.heaters
 
 ;remove fans
 while iterations < #fans
-	if fans[iterations ].name != "Power Supply"
+	if fans[iterations] != null && fans[iterations ].name != "Power Supply"
 		echo "Removing Fan", fans[iterations].name, "F", iterations
 		M950 F{iterations } C"nil"

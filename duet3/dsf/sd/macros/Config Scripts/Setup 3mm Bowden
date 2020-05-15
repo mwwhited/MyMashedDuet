@@ -1,5 +1,5 @@
 M98 P"0:/macros/Config Scripts/Tool Setups/Enable Heater 1"
-;M98 P"0:/macros/Config Scripts/Tool Setups/Disable Heater 2"
+M98 P"0:/macros/Config Scripts/Tool Setups/Disable Heater 2"
 
 M563 P0 S"3mm Bowden" D0 H1 F0                          ; define tool 0
 G10 P0 X0 Y-7 Z0                                         ; set tool 0 axis offsets
