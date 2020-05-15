@@ -1,5 +1,5 @@
 M563 P0 S"3 Color" D0:1:2 H1 F0                         ; define tool 0
-G10 P0 X0 Y0 Z0                                         ; set tool 0 axis offsets
+G10 P0 X0 Y-19 Z0                                         ; set tool 0 axis offsets
 G10 P0 R0 S0                                            ; set initial tool 0 active and standby temperatures to 0C
 M568 P0 S1                                              ; enable mixing for tool 0
 M567 P0 E0.33:0.33:0.34                                 ; set mixing ratios for tool 
