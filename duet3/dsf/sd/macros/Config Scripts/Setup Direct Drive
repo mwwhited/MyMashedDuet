@@ -1,5 +1,5 @@
 M563 P0 S"Direct Drive" D1 H1 F0                        ; define tool 0
-G10 P0 X1 Y16 Z0                                         ; set tool 0 axis offsets
+G10 P0 X1 Y-16 Z0                                         ; set tool 0 axis offsets
 G10 P0 R0 S0                                            ; set initial tool 0 active and standby temperatures to 0C
 M563 P1 D-1 H-1						; remove tool 2
 
