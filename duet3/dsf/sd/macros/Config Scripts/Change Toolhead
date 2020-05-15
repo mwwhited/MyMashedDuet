@@ -18,11 +18,11 @@ while iterations < #tools
 
 echo "disable heaters"
 while iterations < #heat.heaters
-	echo "Heaters", heat.heaters
+	echo "Heaters", heat.heaters[iterations]
 	echo "Heater I", iterations
-	if heat.heaters[iterations] != null && heat.bedHeaters[0] != iterations
-		echo "Removing Heater", heat.heaters[iterations], "H", iterations
-		M950 H{iterations} C"nil"
+	;if heat.heaters[iterations] != null && heat.bedHeaters[0] != iterations
+	;	echo "Removing Heater", heat.heaters[iterations], "H", iterations
+	;	M950 H{iterations} C"nil"
 
 echo "disable temp sensors"
 while iterations < #sensors.analog
