@@ -1,0 +1,21 @@
+;bank 1
+M563 P0 S"Extruder 0" D0 H1 F0                          ; define tool 0
+G10 P0 X0 Y0 Z0                                         ; set tool 0 axis offsets
+G10 P0 R0 S0                                            ; set initial tool 0 active and standby temperatures to 0C
+M563 P1 S"Extruder 1" D1 H1 F0                          ; define tool 1
+G10 P1 X0 Y0 Z0                                         ; set tool 1 axis offsets
+G10 P1 R0 S0                                            ; set initial tool 1 active and standby temperatures to 0C
+M563 P2 S"Extruder 2" D2 H1 F0                          ; define tool 2
+G10 P2 X0 Y0 Z0                                         ; set tool 2 axis offsets
+G10 P2 R0 S0                                            ; set initial tool 2 active and standby temperatures to 0C
+
+;bank 2
+M563 P3 S"Extruder 3" D0 H1 F0                          ; define tool 3
+G10 P3 X0 Y0 Z0                                         ; set tool 3 axis offsets
+G10 P3 R0 S0                                            ; set initial tool 3 active and standby temperatures to 0C
+M563 P4 S"Extruder 4" D1 H1 F0                          ; define tool 4
+G10 P4 X0 Y0 Z0                                         ; set tool 4 axis offsets
+G10 P4 R0 S0                                            ; set initial tool 4 active and standby temperatures to 0C
+M563 P5 S"Extruder 5" D2 H1 F0                          ; define tool 5
+G10 P5 X0 Y0 Z0                                         ; set tool 5 axis offsets
+G10 P5 R0 S0                                            ; set initial tool 5 active and standby temperatures to 0C
