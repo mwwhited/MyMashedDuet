@@ -6,14 +6,6 @@
 
 echo "Loading Configuration"
 
-; Settings from old RAMPS based (3drag controler) board.
-;M92 X79.83 Y78.65 Z397.23 E600.00
-;M203 X400.00 Y400.00 Z50.00 E100.00
-;M201 X5000 Y9000 Z100 E1000
-;M205 S0.00 B20000 X10.00 Z0.40 E5.00
-;M206 X0.00 Y0.00 Z0.00
-;M301 P63.00 I2.25 D440.00
-
 ; General preferences
 G90                                                     ; send absolute coordinates...
 M83                                                     ; ...but relative extruder moves
@@ -102,17 +94,13 @@ G10 P3 R0 S0                                            ; set initial tool 3 act
 M568 P3 S1                                              ; enable mixing for tool 3
 M567 P3 E0.33:0.33:0.34                                 ; set mixing ratios for tool 3
 
-; Custom settings are not defined
-
 ; Configure outpus for Relay Controller
-M950 P0 C"io6.out"
-M950 P1 C"io7.out"
-M950 P2 C"io8.out"
-
-;  Default all relays to off
-M42 P0 S0
-M42 P1 S0
-M42 P2 S0
+M950 P0 C"io6.out"					; setup relay 0
+M42 P0 S0						; set relay 0 off
+M950 P1 C"io7.out"					; setup relay 1
+M42 P1 S0						; set realy 1 off
+M950 P2 C"io8.out"					; setup relay 2
+M42 P1 S0						; set realy 2 off
 
 M98 P"0:/macros/Config Scripts/Heated Bed - 200x200 Glass"
 
