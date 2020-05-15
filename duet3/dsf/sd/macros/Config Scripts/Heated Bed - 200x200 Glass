@@ -1,5 +1,9 @@
-; Heater model parameters
 
-echo "Configured for 200mm x 200mm Glass Bed"
+M308 S0 P"temp0" Y"thermistor" T100000 B3950 A"Bed"     ; configure sensor 0 as thermistor on pin temp0
+M950 H0 C"out0" T0                                      ; create bed heater output on out0 and map it to sensor 0
+M143 H0 S120                                            ; set temperature limit for heater 0 to 120C
+M140 H0                                                 ; map heated bed to heater 0
 
 M307 H0 A179 C803.3 D3.0 S1.0 V24.1 B0
+
+echo "Configured for 200mm x 200mm Glass Bed"

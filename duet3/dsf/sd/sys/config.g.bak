@@ -73,28 +73,28 @@ M308 S3 P"temp3" Y"thermistor" T100000 B4138 A"PS"	; configure sensor 3 as therm
 M950 F3 C"out9" Q500                                    ; create fan 3 on pin out9 and set its frequency
 M106 C"Power Supply" P3 H-1 S0.0			; Power supply fan (3) linked to pwoer supply temp (3) Turn on at 35C
 
-; Tools
-M563 P0 S"Direct Drive" D1 H1 F0                        ; define tool 0
-G10 P0 X0 Y0 Z0                                         ; set tool 0 axis offsets
-G10 P0 R0 S0                                            ; set initial tool 0 active and standby temperatures to 0C
+;; Tools
+;M563 P0 S"Direct Drive" D1 H1 F0                        ; define tool 0
+;G10 P0 X0 Y0 Z0                                         ; set tool 0 axis offsets
+;G10 P0 R0 S0                                            ; set initial tool 0 active and standby temperatures to 0C
+;
+;M563 P1 S"3mm Bowden" D0 H1 F0                          ; define tool 1
+;G10 P1 X0 Y0 Z0                                         ; set tool 1 axis offsets
+;G10 P1 R0 S0                                            ; set initial tool 1 active and standby temperatures to 0C
+;
+;M563 P2 S"Dual 1.75 Bowden" D0:1 H1:2 F0                ; define tool 2
+;G10 P2 X0 Y0 Z0                                         ; set tool 2 axis offsets
+;G10 P2 R0 S0                                            ; set initial tool 2 active and standby temperatures to 0C
+;M568 P2 S1                                              ; enable mixing for tool 2
+;M567 P2 E0.5:0.5                                        ; set mixing ratios for tool 2
+;
+;M563 P3 S"3 Color" D0:1:2 H1 F0                         ; define tool 3
+;G10 P3 X0 Y0 Z0                                         ; set tool 3 axis offsets
+;G10 P3 R0 S0                                            ; set initial tool 3 active and standby temperatures to 0C
+;M568 P3 S1                                              ; enable mixing for tool 3
+;M567 P3 E0.33:0.33:0.34                                 ; set mixing ratios for tool 3
 
-M563 P1 S"3mm Bowden" D0 H1 F0                          ; define tool 1
-G10 P1 X0 Y0 Z0                                         ; set tool 1 axis offsets
-G10 P1 R0 S0                                            ; set initial tool 1 active and standby temperatures to 0C
-
-M563 P2 S"Dual 1.75 Bowden" D0:1 H1:2 F0                ; define tool 2
-G10 P2 X0 Y0 Z0                                         ; set tool 2 axis offsets
-G10 P2 R0 S0                                            ; set initial tool 2 active and standby temperatures to 0C
-M568 P2 S1                                              ; enable mixing for tool 2
-M567 P2 E0.5:0.5                                        ; set mixing ratios for tool 2
-
-M563 P3 S"3 Color" D0:1:2 H1 F0                         ; define tool 3
-G10 P3 X0 Y0 Z0                                         ; set tool 3 axis offsets
-G10 P3 R0 S0                                            ; set initial tool 3 active and standby temperatures to 0C
-M568 P3 S1                                              ; enable mixing for tool 3
-M567 P3 E0.33:0.33:0.34                                 ; set mixing ratios for tool 3
-
-; Configure outpus for Relay Controller
+; Configure outputs for Relay Controller
 M950 P0 C"io6.out"					; setup relay 0
 M42 P0 S0						; set relay 0 off
 M950 P1 C"io7.out"					; setup relay 1
