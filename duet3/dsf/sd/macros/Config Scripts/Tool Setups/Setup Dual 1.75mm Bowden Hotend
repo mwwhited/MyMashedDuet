@@ -1,0 +1,6 @@
+
+M563 P2 S"Dual 1.75 Bowden" D0:1 H1:2 F0                ; define tool 2
+G10 P2 X0 Y0 Z0                                         ; set tool 2 axis offsets
+G10 P2 R0 S0                                            ; set initial tool 2 active and standby temperatures to 0C
+M568 P2 S1                                              ; enable mixing for tool 2
+M567 P2 E0.5:0.5                                        ; set mixing ratios for tool 2
