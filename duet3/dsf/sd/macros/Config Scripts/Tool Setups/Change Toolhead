@@ -1,0 +1,11 @@
+;set relays
+M18 E ; Turn off Steppers for extruders
+G4 P100
+M42 P0 S0 ; Ensure relay 0 is off
+M42 P1 S0 ; Ensure relay 1 is off
+M42 P2 S0 ; Ensure relay 2 is off
+G4 P100
+
+while iterations < #tools
+	M563 P{iterations} D-1 H-1
+	echo iterations 
