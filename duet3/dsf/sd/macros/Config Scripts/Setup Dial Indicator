@@ -3,11 +3,11 @@ M98 P"0:/macros/Config Scripts/Change Toolhead"
 M453						; CNC Mode
 
 ;Tool
-M563 P0 S"Inficator"	; define tool 0
-G10 P0 X0 Y-19 Z0				; set tool 0 axis offsets
+M563 P0 S"Indicator"	; define tool 0
+G10 P0 X-1 Y-20 Z0				; set tool 0 axis offsets
 
 echo "Configured for Pen Plotter"
 
 M28 "0:/sys/lasttool.g"
-M98 P"0:/macros/Config Scripts/Setup Pen Plotter"
+M98 P"0:/macros/Config Scripts/Setup Dial Indicator"
 M29
