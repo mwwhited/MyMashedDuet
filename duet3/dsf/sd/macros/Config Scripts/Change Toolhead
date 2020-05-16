@@ -1,9 +1,9 @@
-echo "check temperature"
+;echo "check temperature"
 while iterations < #sensors.analog
 	if sensors.analog[iterations] != null && sensors.analog[iterations].lastReading > 32
 		abort "Must wait for tool head to cool down!!!"
 
-echo "set relays"
+;echo "set relays"
 M18 E ; Turn off Steppers for extruders
 G4 P100
 M42 P0 S0 ; Ensure relay 0 is off
@@ -11,23 +11,23 @@ M42 P1 S0 ; Ensure relay 1 is off
 M42 P2 S0 ; Ensure relay 2 is off
 G4 P100
 
-echo "remove all tools"
+;echo "remove all tools"
 while iterations < #tools
 	echo "Removing Tool ", tools[iterations].name, "T", iterations
 	M563 P{iterations} D-1 H-1
 
-echo "disable heaters"
+;echo "disable heaters"
 while iterations < #heat.heaters
-	echo "Heater I", iterations
 	if heat.bedHeaters[0] != iterations
 		echo "Removing Heater", heat.heaters[iterations], "H", iterations
 		M950 H{iterations} C"nil"
 
-;echo "disable temp sensors"
-;while iterations < #sensors.analog
-;	if sensors.analog[iterations] != null && sensors.analog[iterations].name != "Bed"
-;		echo "Removing Temp Sensor", sensors.analog[iterations], "T", iterations
-;		;M308 S{iterations} P"nil"
+echo "disable temp sensors"
+while iterations < #sensors.analog
+	echo "Removing Temp Sensor", "T", iterations
+	;if sensors.analog[iterations].name != "Bed"
+	;	echo "Removing Temp Sensor", sensors.analog[iterations], "T", iterations
+	;	;M308 S{iterations} P"nil"
 
 echo "remove fans"
 while iterations < #fans
