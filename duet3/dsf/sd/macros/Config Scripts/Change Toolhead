@@ -28,3 +28,5 @@ while iterations < #fans
 	if fans[iterations] != null && fans[iterations ].name != "Power Supply"
 		echo "Removing Fan", fans[iterations].name, "F", iterations
 		M950 F{iterations} C"nil"
+
+M30 lasttool.g
