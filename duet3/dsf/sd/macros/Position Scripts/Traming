@@ -1,4 +1,4 @@
-
+G0 F20000
 G0 Z30
 G0 X168.0 Y159.5
 G0 Z0
@@ -18,3 +18,7 @@ G0 Z30
 G0 X68.0 Y159.5
 G0 Z0
 G4 P1000
+
+G0 Z30
+G0 X{move.axes[0].max/2} Y{move.axes[1].max/2} F20000	; move center
+G0 Z0
