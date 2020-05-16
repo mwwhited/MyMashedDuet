@@ -18,17 +18,17 @@ M950 F1 C"out4" Q50			; create fan 2 on pin out4 and set its frequency
 M106 P1 S0 H1 T30 C"Hotend"		; set fan 2 value. Thermostatic control is turned on
 
 ;Tool
-M563 P0 S"Right" D0 H1 F0	; define tool 0
-G10 P0 X13 Y10 Z0				; set tool 0 axis offsets
+M563 P0 S"Right" D0 H1 F0		; define tool 0
+G10 P0 X13 Y10 Z0			; set tool 0 axis offsets
 G10 P0 R0 S0				; set initial tool 0 active and standby temperatures to 0C
 M568 P0 S0				; enable mixing for tool 0
 
-M563 P1 S"Left" D1 H2 F0 	; define tool 1
+M563 P1 S"Left" D1 H2 F0 		; define tool 1
 G10 P1 X-5 Y10 Z0			; set tool 1 axis offsets
 G10 P1 R0 S0				; set initial tool 1 active and standby temperatures to 0C
 M568 P1 S0				; enable mixing for tool 1
 
-echo "get feed rate"
+M92 E96.2001				; Feed rate
 
 ;Tuning result for heaters
 M307 H1 A721.8 C208.3 D6.5 S1.0 V24.0 B0
