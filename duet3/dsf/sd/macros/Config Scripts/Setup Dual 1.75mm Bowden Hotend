@@ -34,7 +34,7 @@ M307 H2 A709.1 C215.2 D6.0 S1.0 V24.0 B0
 
 echo "Configured for Dual 1.75 Bowden Hotend"
 
-M28 lasttool.g
+M28 "0:/sys/lasttool.g"
 M98 P"0:/macros/Config Scripts/Setup Dual 1.75mm Bowden Hotend"
 M29
 

@@ -27,6 +27,6 @@ G4 P200
 
 echo "Configured for 3mm Bowden"
 
-M28 lasttool.g
+M28 "0:/sys/lasttool.g"
 M98 P"0:/macros/Config Scripts/Setup 3mm Bowden"
 M29

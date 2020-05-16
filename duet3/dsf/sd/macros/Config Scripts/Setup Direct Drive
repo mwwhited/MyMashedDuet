@@ -23,6 +23,6 @@ G4 P100
 
 echo "Configured for Direct Drive"
 
-M28 lasttool.g
+M28 "0:/sys/lasttool.g"
 M98 P"0:/macros/Config Scripts/Setup Direct Drive"
 M29

@@ -79,5 +79,6 @@ M98 P"0:/macros/Config Scripts/Heated Bed - 200x200 Glass"
 
 ; Execute config-override.g
 M501										 ; Execute config-override.g
+M98 P"0:/gcodes/lasttool.g"
 
 
