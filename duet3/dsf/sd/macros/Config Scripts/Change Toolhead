@@ -20,10 +20,10 @@ while iterations < #tools
 while iterations < #heat.heaters
 	if heat.bedHeaters[0] != iterations
 		echo "Removing Temp Sensor and heater", sensors.analog[heat.heaters[iterations].sensor].name, "T", heat.heaters[iterations].sensor, "H", iterations
-		M308 S{heat.heaters[iterations].sensor} P"nil"
+		M308 S{heat.heaters[iterations].sensor} P"nil" Y"nil"
 		M950 H{iterations} C"nil"
 
-echo "remove fans"
+;echo "remove fans"
 while iterations < #fans
 	if fans[iterations] != null && fans[iterations ].name != "Power Supply"
 		echo "Removing Fan", fans[iterations].name, "F", iterations
