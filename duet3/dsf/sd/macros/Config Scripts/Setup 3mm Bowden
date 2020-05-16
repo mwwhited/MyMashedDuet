@@ -1,6 +1,8 @@
 M98 P"0:/macros/Config Scripts/Change Toolhead"
 M98 P"0:/macros/Config Scripts/Tool Setups/Parts Fan"
 
+M451						; FFF Mode
+
 ;Heater 1 (HTF1)
 M308 S1 P"temp1" Y"thermistor" T100000 B4138 A"HTF1"	; configure sensor 1 as thermistor on pin temp1
 M950 H1 C"out1" T1				; create nozzle heater output on out1 and map it to sensor 1
