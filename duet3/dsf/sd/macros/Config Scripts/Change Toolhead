@@ -19,16 +19,9 @@ while iterations < #tools
 ;echo "disable heaters"
 while iterations < #heat.heaters
 	if heat.bedHeaters[0] != iterations
-		echo "Removing Heater", heat.heaters[iterations], "H", iterations
-		echo "Removing Temp Sensor", sensors.analog[heat.heaters[iterations].sensor].name, "T", heat.heaters[iterations].sensor
-		;M950 H{iterations} C"nil"
-
-;echo "disable temp sensors"
-;while iterations < #sensors.analog
-;	echo "Removing Temp Sensor", "T", iterations
-;	;if sensors.analog[iterations].name != "Bed"
-;	;	echo "Removing Temp Sensor", sensors.analog[iterations], "T", iterations
-;	;	;M308 S{iterations} P"nil"
+		echo "Removing Temp Sensor and heater", sensors.analog[heat.heaters[iterations].sensor].name, "T", heat.heaters[iterations].sensor, "H", iterations
+		M308 S{heat.heaters[iterations].sensor} P"nil"
+		M950 H{iterations} C"nil"
 
 echo "remove fans"
 while iterations < #fans
