@@ -3,7 +3,7 @@ M98 P"0:/macros/Config Scripts/Change Toolhead"
 M453						; CNC Mode
 
 ;Tool
-M563 P0 S"Pen"		; define tool 0
+M563 P0 S"Inficator"	; define tool 0
 G10 P0 X0 Y-19 Z0				; set tool 0 axis offsets
 
 echo "Configured for Pen Plotter"
