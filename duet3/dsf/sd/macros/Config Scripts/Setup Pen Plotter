@@ -1,0 +1,11 @@
+M98 P"0:/macros/Config Scripts/Change Toolhead"
+
+;Tool
+M563 P0 S"Pen" F0	; define tool 0
+G10 P0 X0 Y-19 Z0				; set tool 0 axis offsets
+
+echo "Configured for Pen Plotter"
+
+M28 "0:/sys/lasttool.g"
+M98 P"0:/macros/Config Scripts/Setup Pen Plotter"
+M29
