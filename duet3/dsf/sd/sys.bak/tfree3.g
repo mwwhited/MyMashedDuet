@@ -1,1 +1,0 @@
-M98 P"0:/macros/Config Scripts/Turn Off Relays"
