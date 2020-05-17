@@ -2,18 +2,16 @@
 ; called to home and measure the X axis
 ;
 
-G91			; relative positioning
+M906 X800 Y800 Z800 E800 I30	; reduce current to increase slip when hitting limits
+
+G91				; relative positioning
 
 ;home min
-M574 X2 S1		; set high endstop
-G1 X-250 H1 F1800
-M574 X1 S1		; set low endstop
-G1 X-5 F360
-G1 X-250 H1 F1800	; Home X to 0 "quickly"
+M574 X1 S1			; set low endstops
+G1 X-250 H1 F1800		; Home to 0 "quickly"
+G1 X5 F360			; back off endstops
+G1 X-250 H1 F360		; Home to 0 "slowly"
 
-G1 X5 F360		; back off endstop
+G90               		; absolute positioning
 
-M574 X1 S1		; set low endstop
-G1 X-250 H1 F360	; Home X to 0 "slowly"
-
-G90               	; absolute positioning
+M906 X2000 Y2000 Z2000 E2000 I30; restore current 
