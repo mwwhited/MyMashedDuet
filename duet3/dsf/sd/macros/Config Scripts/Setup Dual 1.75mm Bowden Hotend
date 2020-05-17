@@ -34,6 +34,9 @@ M92 E96.2001				; Feed rate
 M307 H1 A721.8 C208.3 D6.5 S1.0 V24.0 B0
 M307 H2 A709.1 C215.2 D6.0 S1.0 V24.0 B0
 
+;Set filament size 
+M200 D1.75
+
 echo "Configured for Dual 1.75 Bowden Hotend"
 
 M28 "0:/sys/lasttool.g"

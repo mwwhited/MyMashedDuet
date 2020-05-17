@@ -20,8 +20,11 @@ M307 H1 A549.5 C243.9 D3.8 S1.0 V24.0 B0		; Set hotend
 
 M18 E ; turn off steppers for extruders
 G4 P100
-M42 P1 S1
+M42 P1 S1	;Set relay 1 one
 G4 P100
+
+;Set filament size 
+M200 D3.0
 
 echo "Configured for Direct Drive"
 
