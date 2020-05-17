@@ -2,6 +2,8 @@
 ; called to home and measure the Z axis
 ;
 
+M906 X800 Y800 Z800 E800 I30			; reduce current to increase slip when hitting limits
+
 G91			; relative positioning
 M208 Z0 S1		; Z set minimum to 0
 M208 Z250 S0		; Z set maximum to 250
@@ -23,6 +25,8 @@ M574 Z1 S1		; set low endstop
 G1 Z-250 H1 F1800	; Home x to 0 "quickly"
 G1 Z5 F360		; back off endstop
 G1 Z-250 H1 F360	; Home x to 0 "slowly"
+
+M906 X2000 Y2000 Z2000 E2000 I30			; restore current 
 
 G90               ; absolute positioning
 G0  Z{move.axes[2].max/2} F20000	; move center

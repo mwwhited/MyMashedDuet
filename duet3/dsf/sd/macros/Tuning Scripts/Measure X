@@ -1,6 +1,8 @@
 ; called to home and measure the X axis
 ;
 
+M906 X500 Y500 Z500 E500 I30			; reduce current to increase slip when hitting limits
+
 G91			; relative positioning
 M208 X0 S1		; X set minimum to 0
 M208 X250 S0		; X set maximum to 250
@@ -22,6 +24,8 @@ M574 X1 S1		; set low endstop
 G1 X-250 H1 F1800	; Home x to 0 "quickly"
 G1 X5 F360		; back off endstop
 G1 X-250 H1 F360	; Home x to 0 "slowly"
+
+M906 X2000 Y2000 Z2000 E2000 I30			; restore current 
 
 G90               ; absolute positioning
 G0  X{move.axes[0].max/2} F20000	; move center
