@@ -2,6 +2,9 @@
 ; called to home and measure the Z axis
 ;
 
+
+M906 X500 Y500 Z500 E500 I30			; reduce current to increase slip when hitting limits
+
 G91				; relative positioning
 M208 X0 Y0 Z0 S1		; Z set minimum to 0
 M208 X250 Y250 Z250 S0		; Z set maximum to 250
@@ -25,5 +28,8 @@ G1 X5 Y5 Z5 F360		; back off endstop
 G1 X-250 Y-250 Z-250 H1 F360	; Home to 0 "slowly"
 
 G90               		; absolute positioning
+
+M906 X2000 Y2000 Z2000 E2000 I30			; set motor currents (mA) and motor idle factor in percent
+
 G0 X{move.axes[0].max/2} Y{move.axes[1].max/2} Z{move.axes[2].max/2} F20000	; move center
 M208
