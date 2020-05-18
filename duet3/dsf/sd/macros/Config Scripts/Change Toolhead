@@ -1,6 +1,6 @@
 ;echo "check temperature"
 while iterations < #sensors.analog
-	if sensors.analog[iterations] != null && sensors.analog[iterations].lastReading > 32 && sensors.analog[iterations].name != "PS" && sensors.analog[iterations].name != "Bed"
+	if sensors.analog[iterations] != null && sensors.analog[iterations].lastReading > 32 && sensors.analog[iterations].name != "PS" ;&& sensors.analog[iterations].name != "Bed"
 		abort "Must wait for tool head to cool down!!!"
 
 ;echo "set relays"
