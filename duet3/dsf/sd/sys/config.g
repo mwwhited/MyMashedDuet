@@ -2,7 +2,7 @@
 ; executed by the firmware on start-up
 ; update by Matthew Whited (c) 04/2020+
 
-M118 "Starting Configuration!"
+M118 S"Starting Configuration!"
 
 ; General preferences
 G90                                                     ; send absolute coordinates...
@@ -61,6 +61,6 @@ M98 P"0:/macros/Config Scripts/Heated Bed - 200x200 Glass"
 M501							; Execute config-override.g
 M98 P"0:/sys/lasttool.g"				; Configure tool for last manual selection
 
-M118 "Loaded Configuration"
+M118 S"Loaded Configuration"
 
 
