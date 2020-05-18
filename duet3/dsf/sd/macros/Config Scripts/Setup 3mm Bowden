@@ -22,9 +22,11 @@ M92 E97.3278					; Feed rate
 M307 H1 A424.6 C236.6 D6.6 S1.0 V24.0 B0 ; tune heater for reprap diamond
 
 M18 E ; turn off steppers for extruders
-G4 P200
+G4 P100
 M42 P0 S1	;set relay 0 on
-G4 P200
+G4 P100
+M42 P0 S.3	;set relay 0 on (30% to save current?)
+G4 P100
 
 ;Set filament size 
 M200 D3.0

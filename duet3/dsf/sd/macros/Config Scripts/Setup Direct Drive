@@ -22,6 +22,8 @@ M18 E ; turn off steppers for extruders
 G4 P100
 M42 P1 S1	;Set relay 1 one
 G4 P100
+M42 P1 S.3	;set relay 0 on (30% to save current?)
+G4 P100
 
 ;Set filament size 
 M200 D3.0
