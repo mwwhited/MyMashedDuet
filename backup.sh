@@ -2,6 +2,7 @@
 
 cd /home/pi/MyMashedDuet
 git pull
+cp ../*.sh ./scripts
 sudo chown pi /opt/dsf/sd -R
 #sync back was causing issues and not really needed
 rsync /opt/dsf/sd /home/pi/MyMashedDuet/duet3/dsf -rv --exclude *.bin --exclude sd/gcodes/* --exclude sd/sys/lasttool.g --exclude sd/sys/config.g.bak --delete 
